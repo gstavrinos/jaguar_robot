@@ -1,0 +1,11 @@
+#Python
+*.pyc
+
+#ViM
+*.swp
+
+#Backup files
+*~*
+
+#Emacs
+.#*
