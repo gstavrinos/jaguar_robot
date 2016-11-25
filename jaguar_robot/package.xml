@@ -2,14 +2,13 @@
 <package>
   <name>jaguar_robot</name>
   <version>0.1.0</version>
-  <description>The jaguar_robot package</description>
+  <description>Metapackage for DrRobot's Jaguar4x4 robot software</description>
 
   <maintainer email="gstavrinos@iit.demokritos.gr">George Stavrinos</maintainer>
 
   <license>BSD</license>
 
-  <!-- <url type="website">http://wiki.ros.org/jaguar_robot</url> -->
-
+  <url type="website">http://wiki.ros.org/jaguar_robot</url>
   <url type="bugtracker">https://github.com/gstavrinos/jaguar_robot/issues</url>
   <url type="repository">https://github.com/gstavrinos/jaguar_robot</url>
 
