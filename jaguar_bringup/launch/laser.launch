@@ -1,0 +1,21 @@
+<launch>
+	<!-- Laser node -->
+    <node pkg="urg_node" name="urg_node" type="urg_node">
+        <param name="ip_address" value="192.168.0.60"/>
+        <param name="ip_port" value="10002"/>
+        <param name="frame_id" value="/laser_link"/>
+        <param name="caliberate_time" value="true"/>
+        <param name="publish_intensity" value="false"/>
+        <param name="skip" value="4"/>
+        <param name="angle_min" value="-2.094"/>
+        <param name="angle_max" value="2.094"/>
+        <remap from="scan" to="base_scan" />
+    </node>
+
+    <!-- Laser filters -->
+    <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
+        <rosparam command="load" file="$(find jaguar4x4)/config/laser_config.yaml" />
+        <remap from="scan" to="base_scan" />
+        <remap from="scan_filtered" to="scan" />
+    </node>
+</launch>

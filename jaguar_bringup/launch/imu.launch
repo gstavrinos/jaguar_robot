@@ -1,0 +1,6 @@
+<launch>
+	<!-- MyAHRS driver -->
+    <node pkg="myahrs_driver" name="myahrs_driver" type="myahrs_driver"/>
+    <!-- IMU filter -->
+    <node pkg="imu_complementary_filter" type="complementary_filter_node" name="imu_complementary_filter"/>
+</launch>
