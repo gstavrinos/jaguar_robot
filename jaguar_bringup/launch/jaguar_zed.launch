@@ -21,7 +21,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <arg name="odometry_frame"        default="odom" />
 
     <group ns="zed">
-        <include file="$(find zed_wrapper)/launch/zed_camera_jaguar.launch">
+        <include file="$(find jaguar_bringup)/launch/zed_camera_jaguar.launch">
             <!-- compliant mode for rviz -->
             <arg name="odometry_frame"        value="$(arg odometry_frame)" />
         </include>
