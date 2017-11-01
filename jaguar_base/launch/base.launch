@@ -18,5 +18,4 @@
     <!-- Safety controler -->
     <!--<include file="$(find safety_controller)/launch/safety_c.launch" /> -->
 
-
 </launch>
