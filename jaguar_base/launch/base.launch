@@ -12,4 +12,10 @@
     <!--Teleop -->
     <include file="$(find jaguar_control)/launch/teleop.launch" />
 
+    <!-- Imu -->
+    <include file="$(find jaguar_bringup)/launch/imu.launch" />
+
+    <!-- Safety controler -->
+    <!--<include file="$(find safety_controller)/launch/safety_c.launch" /> -->
+
 </launch>
