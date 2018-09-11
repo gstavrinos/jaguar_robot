@@ -7,6 +7,7 @@
 #include "ros/ros.h"
 #include "sensor_msgs/JointState.h"
 #include "jaguar_msgs/JaguarStatus.h"
+#include "sensor_msgs/NavSatFix.h"
 #include <string>
 #include <jaguar_base/drrobot_wrapper.hpp>
 
@@ -58,7 +59,9 @@ class JaguarHardware : public hardware_interface::RobotHW{
     hardware_interface::VelocityJointInterface velocity_joint_interface_;
 
     // Diagnostics
+    ros::Publisher gps_publisher_;
     ros::Publisher status_publisher_;
+    sensor_msgs::NavSatFix gps_status;
     jaguar_msgs::JaguarStatus jaguar_status_msg_;
 
     // ROS Parameters
