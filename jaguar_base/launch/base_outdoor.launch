@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Load robot description -->
+    <include file="$(find jaguar_description)/launch/description.launch"/>
+
+    <!-- Jaguar harware driver -->
+    <node pkg="jaguar_base" type="jaguar_node" name="jaguar_node" output="screen"/>
+
+    <!-- Differential controller parameters and basic localization -->
+    <include file="$(find jaguar_control)/launch/control_outdoor.launch" />
+
+    <!--Teleop -->
+    <include file="$(find jaguar_control)/launch/teleop.launch" />
+
+    <!-- Imu -->
+    <include file="$(find jaguar_bringup)/launch/imu.launch" />
+
+    <!-- Safety controler -->
+    <!--<include file="$(find safety_controller)/launch/safety_c.launch" /> -->
+
+</launch>
